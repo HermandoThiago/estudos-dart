@@ -18,23 +18,29 @@ void main(){
     print("A lista não possui o valor 50");
   }
   
-  
   // Reverta a ordem dos itens dessa lista, retornando uma nova lista no lugar.
   
   final List<int> reverso = inteiros.reversed.toList();
   print(reverso);
   
-  // Crie uma nova lista do tipo 'double' baseado na lista gerada. Os itens da nova lista 
+  // Crie uma nova lista do tipo 'double' baseado na lista gerada. Os itens da nova lista +
   // devem ser o resultado do respectivo item da lista antiga divido por 2.
   
   final List<double> floats = inteiros.map((a) => a / 2).toList();
+  print(floats);
   
   // Crie uma nova lista que seja um 'filtro' da lista antiga, contendo apenas seus valores pares.
+  // Crie uma nova lista que seja um 'filtro' da lista antiga, contendo apenas seus valores impares.
   
   final List<int> pares = [];
+  final List<int> odds = [];
   
   for(int a in inteiros){
-     if(a.isEven){pares.add(a);}
+     if(a.isEven){ pares.add(a); }
+  }
+
+  for(int a in inteiros){
+    if(a.isOdd){ odds.add(a); }
   }
   
   print(pares);
